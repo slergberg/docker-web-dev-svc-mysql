@@ -1,5 +1,5 @@
 # Base image
-FROM mysql:5.6
+FROM mysql:8.0.18
 
 # Expose ports
 EXPOSE 3306
