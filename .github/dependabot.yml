@@ -1,0 +1,36 @@
+version: 2
+
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: docker
+    directory: /5.6
+    schedule:
+      interval: weekly
+    ignore:
+      - dependency-name: mysql
+        versions: ['>=5.7.0']
+
+  - package-ecosystem: docker
+    directory: /5.7
+    schedule:
+      interval: weekly
+    ignore:
+      - dependency-name: mysql
+        versions: ['>=5.8.0']
+
+  - package-ecosystem: docker
+    directory: /8.0
+    schedule:
+      interval: weekly
+    ignore:
+      - dependency-name: mysql
+        versions: ['>=8.1.0']
+
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: weekly
